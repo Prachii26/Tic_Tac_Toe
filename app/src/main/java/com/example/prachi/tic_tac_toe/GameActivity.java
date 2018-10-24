@@ -2,6 +2,7 @@ package com.example.prachi.tic_tac_toe;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -40,6 +41,9 @@ public class GameActivity extends  AppCompatActivity implements View.OnClickList
         playerName1 = getIntent().getStringExtra("name1");
         playerName2 = getIntent().getStringExtra("name2");
 
+        Log.d("mytag",playerName1);
+        Log.d("mytag",playerName2);
+        Log.d("mytag","hey there from log");
 
         button1 = findViewById(R.id.b1);
         button2 = findViewById(R.id.b2);

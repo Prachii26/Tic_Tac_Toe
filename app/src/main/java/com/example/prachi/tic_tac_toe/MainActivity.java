@@ -9,22 +9,21 @@ import android.widget.EditText;
 
 
 public class MainActivity extends AppCompatActivity{
-
+    EditText text;
+    EditText text1;
     String name1,name2;
     Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        EditText text = (EditText) findViewById(R.id.player1);
-        name1= text .getText().toString();
-
-        EditText text1 =(EditText) findViewById(R.id.player2);
-        name2= text1 .getText().toString();
-        btn= (Button)findViewById(R.id.button);
+        text= findViewById(R.id.player1);
+        text1= findViewById(R.id.player2);
+        btn= findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                name1= text .getText().toString();
+                name2= text1 .getText().toString();
                 Intent intent = new Intent(MainActivity.this, GameActivity.class);
                 intent.putExtra("name1", name1);
                 intent.putExtra("name2", name2);
